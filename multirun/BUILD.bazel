@@ -1,4 +1,4 @@
-load("@io_bazel_rules_go//go:def.bzl", "go_binary", "go_library")
+load("@rules_go//go:def.bzl", "go_binary", "go_library")
 
 go_library(
     name = "go_default_library",
@@ -7,8 +7,7 @@ go_library(
         "multirun.go",
         "process.go",
     ],
-    importpath = "github.com/ash2k/bazel-tools/multirun",
-    visibility = ["//visibility:private"],
+    importpath = "github.com/jbdalido/multirun",
 )
 
 go_binary(

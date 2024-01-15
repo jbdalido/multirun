@@ -1,5 +1,0 @@
-sh_binary(
-    name = "linter",
-    srcs = ["golangci-lint"],
-    visibility = ["//visibility:public"],
-)

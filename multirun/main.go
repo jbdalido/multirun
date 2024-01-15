@@ -6,7 +6,6 @@ import (
 	"errors"
 	"flag"
 	"fmt"
-	"io/ioutil"
 	"os"
 	"os/exec"
 	"os/signal"
@@ -57,7 +56,7 @@ type arguments struct {
 }
 
 func (a arguments) readInstructions() (instructions, error) {
-	content, err := ioutil.ReadFile(a.instructionsFile)
+	content, err := os.ReadFile(a.instructionsFile)
 	if err != nil {
 		return instructions{}, fmt.Errorf("failed to read instructions file %q: %v", a.instructionsFile, err)
 	}
