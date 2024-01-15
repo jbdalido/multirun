@@ -17,13 +17,13 @@ http_archive(
 )
 
 git_repository(
-    name = "com_github_ash2k_bazel_tools",
+    name = "com_github_jbdalido_multirun",
     commit = "<commit>",
     remote = "https://github.com/ash2k/bazel-tools.git",
     shallow_since = "<bla>",
 )
 
-load("@com_github_ash2k_bazel_tools//multirun:deps.bzl", "multirun_dependencies")
+load("@com_github_jbdalido_multirun//multirun:deps.bzl", "multirun_dependencies")
 
 multirun_dependencies()
 ```
@@ -31,7 +31,7 @@ multirun_dependencies()
 `BUILD.bazel` file:
 
 ```bzl
-load("@com_github_ash2k_bazel_tools//multirun:def.bzl", "multirun", "command")
+load("@com_github_jbdalido_multirun//multirun:def.bzl", "multirun", "command")
 
 command(
     name = "command1",
